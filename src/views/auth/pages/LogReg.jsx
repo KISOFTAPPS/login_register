@@ -27,7 +27,7 @@ export const LogReg = () => {
         <section style={{ backgroundImage: "url(assets/img/bg.jpg)" }}>
             <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center">
                 <h1
-                    className="border rounded bg-dark text-light"
+                    className="m-5 border rounded bg-dark text-light shadow text-center"
                     style={{ opacity: "95%" }}
                 >
                     PRACTICA DE LOGIN Y REGISTRO
@@ -36,7 +36,7 @@ export const LogReg = () => {
                     <div className="row gx-2 gy-2">
                         <div className="col-md">
                             <div
-                                className="p-1 rounded border bg-dark"
+                                className="p-1 rounded border bg-dark shadow"
                                 style={{ opacity: "95%" }}
                             >
                                 <h5 className="text-center text-light">
@@ -86,7 +86,7 @@ export const LogReg = () => {
                         </div>
                         <div className="col-sm">
                             <div
-                                className="p-1 rounded border bg-dark"
+                                className="p-1 rounded border bg-dark shadow"
                                 style={{ opacity: "95%" }}
                             >
                                 <h5 className="text-center text-light">
