@@ -1,6 +1,7 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
+import { useAuthStore } from "../../../hooks";
 
 const SignInSchema = Yup.object().shape({
     correo: Yup.string().email("Invalid email").required("Required"),
@@ -23,6 +24,7 @@ const SignUpSchema = Yup.object().shape({
 });
 
 export const LogReg = () => {
+    const { startLogin, startRegister } = useAuthStore();
     return (
         <section style={{ backgroundImage: "url(assets/img/bg.jpg)" }}>
             <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center">
@@ -50,7 +52,10 @@ export const LogReg = () => {
                                     validationSchema={SignInSchema}
                                     onSubmit={(value) => {
                                         // same shape as initial values
-                                        console.log(value);
+                                        startLogin({
+                                            email: value.correo,
+                                            password: value.contraseña,
+                                        });
                                     }}
                                 >
                                     <Form className="row justify-content-center ">
@@ -103,7 +108,20 @@ export const LogReg = () => {
                                     validationSchema={SignUpSchema}
                                     onSubmit={(value) => {
                                         // same shape as initial value
-                                        console.log(value);
+                                        if (
+                                            value.contraseña ===
+                                            value.repContraseña
+                                        ) {
+                                            startRegister({
+                                                name: value.nombre,
+                                                email: value.correo,
+                                                password: value.contraseña,
+                                            });
+                                        } else {
+                                            console.log(
+                                                "Las contraseñas no coinciden"
+                                            );
+                                        }
                                     }}
                                 >
                                     <Form className="row justify-content-center">
