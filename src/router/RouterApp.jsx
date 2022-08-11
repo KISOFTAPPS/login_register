@@ -6,7 +6,7 @@ import { Bienvenida } from "../views/bienvenida";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
-import loading from "../assets/img/loading.gif";
+import loading from "../../assets/img/loading.gif";
 
 const RouterApp = () => {
     const { isAuthenticated, checkToken } = useAuthStore();
