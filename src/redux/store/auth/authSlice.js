@@ -1,13 +1,14 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// Se crea el slice el cual contiene todos los estados de la store y sus acciones
 export const authSlice = createSlice({
-    name: "auth",
-    initialState: {
+    name: "auth", // Se le pasa el nombre del slice
+    initialState: { // Se le pasa el estado inicial
         isAuthenticated: null,
         user: {},
         errorMessage: null,
     },
-    reducers: {
+    reducers: {// Se le pasa las acciones
         onChecking: (state) => {
             state.isAuthenticated = null;
             state.user = {};
