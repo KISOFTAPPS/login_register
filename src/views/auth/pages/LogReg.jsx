@@ -26,7 +26,7 @@ const SignUpSchema = Yup.object().shape({
 export const LogReg = () => {
     const { startLogin, startRegister } = useAuthStore();
     return (
-        <section style={{ backgroundImage: "url(assets/img/bg.jpg)" }}>
+        <section style={{ backgroundImage: "url(public/assets/img/bg.jpg)" }}>
             <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center">
                 <h1
                     className="m-5 border rounded bg-dark text-light shadow text-center"

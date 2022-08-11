@@ -15,7 +15,7 @@ const RouterApp = () => {
     if (isAuthenticated === null) {
         return (
             <div className="min-vh-100 d-flex justify-content-center align-items-center">
-                <img src="/assets/img/loading.gif" alt="Cargando..." />
+                <img src="public/assets/img/loading.gif" alt="Cargando..." />
             </div>
         );
     }
