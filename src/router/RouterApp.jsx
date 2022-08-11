@@ -6,8 +6,6 @@ import { Bienvenida } from "../views/bienvenida";
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
 
-import loading from "../../assets/img/loading.gif";
-
 const RouterApp = () => {
     const { isAuthenticated, checkToken } = useAuthStore();
     useEffect(() => {
@@ -17,7 +15,7 @@ const RouterApp = () => {
     if (isAuthenticated === null) {
         return (
             <div className="min-vh-100 d-flex justify-content-center align-items-center">
-                <img src={loading} alt="Cargando..." />
+                <img src="/assets/img/loading.gif" alt="Cargando..." />
             </div>
         );
     }
